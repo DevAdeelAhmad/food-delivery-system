@@ -23,10 +23,10 @@ const data = [
 
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
-    // useEffect(() => {
-    //     const interval = setInterval(() => setCurrentSlide(prev => (prev === data.length - 1 ? 0 : prev + 1)), 2000);
-    //     return () => clearInterval(interval);
-    // }, [])
+    useEffect(() => {
+        const interval = setInterval(() => setCurrentSlide(prev => (prev === data.length - 1 ? 0 : prev + 1)), 2000);
+        return () => clearInterval(interval);
+    }, [])
 
     return (
         <div className='flex flex-col h-[calc(100vh-2rem)] md:h-[calc(100vh-5rem)] lg:h-[calc(100vh)] lg:flex-row bg-fuchsia-50'>
