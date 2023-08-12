@@ -4,10 +4,11 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
-
-  adminer:
-    image: adminer
-    restart: always
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydb
     ports:
-      - 8080:8080
+      - 5432:5432
+
+
+      
